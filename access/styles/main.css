@@ -1,0 +1,351 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-image: url(../images/image/p0521_l.png);
+  box-sizing: border-box;
+  text-shadow: 4px 4px 4px rgb(159, 159, 159);
+}
+
+.image {
+  width: 80vw;
+  height: 80vw;
+  box-shadow: 5px 5px 5px 0 rgb(128, 128, 128);
+}
+
+.hd {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  background-color: rgba(156, 156, 156, 0.903);
+  z-index: 500;
+}
+.hd .hb_menu {
+  background-color: unset;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 400;
+  transform: translateY(-50%);
+}
+.hd .hb_menu.hb_menu_open {
+  z-index: 400;
+}
+.hd .hb_menu.hb_menu_open span:nth-child(1) {
+  transform: translateY(16px) rotate(225deg);
+}
+.hd .hb_menu.hb_menu_open span:nth-child(2) {
+  transform: scale(0);
+}
+.hd .hb_menu.hb_menu_open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-225deg);
+}
+.hd .hb_menu > span {
+  width: 35px;
+  height: 2px;
+  margin-bottom: 10px;
+  display: block;
+  background-color: rgb(0, 0, 0);
+  transition: transform 1s;
+}
+.hd .mo_nav {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(177, 175, 175, 0.63);
+}
+.hd .mo_nav ul {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.hd .mo_nav ul .mo_nav_list {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  line-height: 90px;
+  font-size: 40px;
+  letter-spacing: 20px;
+  text-orientation: upright;
+}
+.hd .mo_nav ul .mo_nav_list a {
+  color: white;
+}
+.hd .mo_nav.nav_open {
+  display: block;
+}
+.hd .hd_co {
+  display: flex;
+}
+.hd .hd_co .icon img {
+  width: 50px;
+  height: 50px;
+}
+.hd .nav {
+  display: none;
+}
+.hd .ft_ds {
+  display: none;
+}
+
+.ma {
+  margin-top: 100px;
+  display: grid;
+  grid-template: "map      " 100vw ".        " 20px "info     " 100vw ".        " 20px "exterior " 100vw ".        " 20px "comment  " 100vw/100%;
+}
+.ma .pr {
+  position: fixed;
+  height: 100px;
+  top: 110px;
+  left: 2%;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-shadow: 2px 2px 2px rgb(128, 128, 128);
+  z-index: 300;
+}
+.ma .map {
+  grid-area: map;
+  position: relative;
+}
+.ma .map .map_image {
+  width: 90vw;
+  height: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px 0 rgb(128, 128, 128);
+}
+.ma .info {
+  grid-area: info;
+  position: relative;
+}
+.ma .info tr {
+  width: 70px;
+  vertical-align: middle;
+}
+.ma .info .info_ex {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 3px;
+}
+.ma .info .info_ex .info_td_tl {
+  height: 80px;
+  vertical-align: middle;
+}
+.ma .info .info_ex .info_td_co {
+  vertical-align: middle;
+}
+.ma .exterior {
+  grid-area: exterior;
+  position: relative;
+}
+.ma .exterior .exterior_image {
+  width: 90vw;
+  height: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px 0 rgb(128, 128, 128);
+}
+.ma .comment {
+  grid-area: comment;
+  position: relative;
+}
+.ma .comment .comment_ex {
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 3px;
+}
+
+.ft_mb {
+  height: 100px;
+}
+.ft_mb .ft_sns {
+  display: flex;
+  justify-content: space-around;
+}
+.ft_mb .ft_sns a {
+  display: inline-block;
+}
+.ft_mb .ft_sns img {
+  width: 50px;
+  height: 50px;
+}
+.ft_mb .cl {
+  text-align: center;
+}
+
+@media (min-width: 1280px) {
+  body {
+    box-sizing: content-box;
+  }
+  .ft_mb {
+    display: none;
+  }
+  .image {
+    width: 45vw;
+    height: 40vw;
+    box-shadow: 10px 10px 10px 0 rgb(128, 128, 128);
+  }
+  .hd {
+    width: 200px;
+    height: 100%;
+    background-color: none;
+    background-image: url(../images/image/p0521_l.png);
+    box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.5019607843);
+  }
+  .hd .hb_menu {
+    display: none;
+  }
+  .hd .nav {
+    display: block;
+  }
+  .hd .ft_ds {
+    grid-area: ft;
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  .hd .ft_ds .ft_sns {
+    display: flex;
+    justify-content: space-around;
+  }
+  .hd .ft_ds .ft_sns a {
+    display: inline-block;
+  }
+  .hd .ft_ds .ft_sns img {
+    width: 50px;
+    height: 50px;
+  }
+  .hd .ft_ds .cl {
+    text-align: center;
+  }
+  .hd .hd_co {
+    display: grid;
+    grid-template: "icon " 15vh "wrap " 40vh "nav  " 30vh "ft   " 15vh/200px;
+  }
+  .hd .hd_co .icon {
+    grid-area: icon;
+  }
+  .hd .hd_co > .icon img {
+    width: 80px;
+    height: 80px;
+  }
+  .hd .hd_co .icon img {
+    margin: 0 auto;
+    display: block;
+  }
+  .hd .hd_co .wrap {
+    grid-area: wrap;
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    position: relative;
+  }
+  .hd .hd_co .wrap .wrap_inner {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .hd .hd_co .wrap .shopname {
+    display: inline-block;
+    font-size: 40px;
+  }
+  .hd .hd_co .wrap .catchcopy {
+    display: inline-block;
+    font-size: 32px;
+  }
+  .hd .hd_co .nav {
+    grid-area: nav;
+    position: relative;
+  }
+  .hd .hd_co .nav_list {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    margin: 0 auto;
+  }
+  .hd .hd_co .nav_list li {
+    font-size: 30px;
+    line-height: 50px;
+    text-orientation: upright;
+  }
+  .ma {
+    width: calc(100% - 200px);
+    margin-left: 200px;
+    margin-top: 0;
+    display: grid;
+    grid-template: "map      info    " 50vh ".        .       " 20px "comment  exterior" 50vh/50% 50%;
+  }
+  .ma .pr {
+    font-size: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 30px;
+    right: 2%;
+    color: white;
+    font-weight: bold;
+    z-index: 300;
+  }
+  .ma .map .map_image {
+    width: 40vw;
+    height: 90%;
+  }
+  .ma .info .info_ex {
+    height: 90%;
+    font-size: 25px;
+  }
+  .ma .info .info_ex tr {
+    width: 90px;
+  }
+  .ma .info .info_ex .info_td_tl {
+    height: 120px;
+  }
+  .ma .exterior .exterior_image {
+    width: 40vw;
+    height: 90%;
+  }
+  .ma .comment .comment_ex {
+    height: 80%;
+    font-size: 25px;
+    line-height: 40px;
+  }
+}/*# sourceMappingURL=main.css.map */

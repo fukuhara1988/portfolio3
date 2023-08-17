@@ -1,0 +1,7 @@
+@import "modules_css/variables";
+
+@import "breakpoints/mobile_access";
+
+@media (min-width:1280px) {
+  @import "breakpoints/1280up_access";
+}
